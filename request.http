@@ -1,0 +1,15 @@
+
+# List of all massages
+# GET http://localhost:3030/massage/find-all-massage
+
+# Create a new massage
+# POST http://localhost:3030/massage/Create-a-massage
+# Content-Type : application/json
+
+# {
+#     "content": "this is to check 2"
+# }
+
+# Get a massage  find by id
+
+GET http://localhost:3030/massage/241
