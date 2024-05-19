@@ -1,6 +1,8 @@
+import { Injectable } from "@nestjs/common";
 import { writeFile } from "fs/promises";
 import { readFile } from "fs/promises";
 
+@Injectable()
 export class MasssageRepository{
     async findOne(id:string){
         const contents =  await readFile('massage.json','utf8');
