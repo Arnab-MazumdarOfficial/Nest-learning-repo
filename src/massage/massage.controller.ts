@@ -1,7 +1,9 @@
 import { Body, Controller, Get, NotFoundException, Param, Post } from '@nestjs/common';
 import { MassageService } from './massage.service';
 import { MassageDto } from 'src/DTO and Entities/massage.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('massages')
 @Controller('massage')
 export class MassageController {
     constructor(private massageServise : MassageService){
