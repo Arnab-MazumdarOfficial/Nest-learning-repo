@@ -1,4 +1,6 @@
 import { Controller } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('user')
+@ApiTags('auth')
+@Controller('auth')
 export class UserController {}

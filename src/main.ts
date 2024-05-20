@@ -39,7 +39,10 @@ SwaggerModule.setup('api', app, document,{
   }
 });
   app.useGlobalPipes(
-    new ValidationPipe()
+    new ValidationPipe({
+      whitelist:true,
+    }),
+
   );
   app.enableShutdownHooks();
   await app.listen(3030);
