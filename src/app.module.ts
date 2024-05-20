@@ -7,9 +7,11 @@ import { CpuModule } from './cpu/cpu.module';
 import { PowerServiceModule } from './power_service/power_service.module';
 import { DiskModule } from './disk/disk.module';
 import { computerModule } from './computer/computer.module';
+import { UserModule } from './user/user.module';
+import { ReportModule } from './report/report.module';
 
 @Module({
-  imports: [MassageModule, CpuModule, PowerServiceModule, DiskModule, computerModule],
+  imports: [MassageModule, CpuModule, PowerServiceModule, DiskModule, computerModule, UserModule, ReportModule],
   controllers: [AppController],
   providers: [AppService],
 })
