@@ -9,6 +9,7 @@ import { serialize  } from 'src/interceptor/serialize.interceptor';
 
 @ApiTags('auth')
 @Controller('auth')
+@serialize(userDto)
 export class UserController {
     constructor(private userService: UserService) { }
 

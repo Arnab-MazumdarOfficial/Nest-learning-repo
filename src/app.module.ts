@@ -12,6 +12,7 @@ import { ReportModule } from './report/report.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { userEntity } from './DTO and Entities/user.entity';
 import { reportEntity } from './DTO and Entities/report.entity';
+import { UserAuthModule } from './user-auth/user-auth.module';
 
 @Module({
   imports: [MassageModule, CpuModule, PowerServiceModule, DiskModule, computerModule, UserModule, ReportModule,TypeOrmModule.forRoot({
@@ -20,7 +21,7 @@ import { reportEntity } from './DTO and Entities/report.entity';
       entities: [userEntity,reportEntity],
       synchronize: true,
       logging: true,
-  })],
+  }), UserAuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
